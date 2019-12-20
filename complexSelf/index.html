@@ -1,0 +1,33 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="self.json"></script>
+    <title>Document</title>
+</head>
+<body>
+     <div id="myself"></div>
+    <script>
+        
+
+        var output = '';
+        var isMarried = '';
+
+            if (Self[0].Married == false){
+                isMarried = "Not Currently Married.";
+            }else{
+                isMarried = "Currently Married.";
+            }
+
+            output += "My Info: <br><br>" + 
+            "Name: "+ Self[0].Name + "<br>" +
+            "Age: "+ Self[0].Age + "<br>" +
+            isMarried + "<br>" +
+            "Favorite Class: "+ Self[0].Classes[0] + "<br>" +
+            "Favorite Hobbie: "+ Self[0].Hobbies.Football + "<br><br>";
+
+            document.getElementById('myself').innerHTML = output;
+
+    </script>
+</body>
+</html>

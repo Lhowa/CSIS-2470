@@ -1,0 +1,82 @@
+<head>
+    <title>JavaScript Basics with JSON Format</title>
+    <link rel="stylesheet" href="layout.css" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script>
+        var data = {"Adventure": [
+                {
+                    "place": "You are home. Where would you like to go?",
+                    "option1": {
+                        "text": "The forest",
+                        "value": 1},
+                    "option2": {"text": "The desert",
+                        "value": 2}
+
+                },
+                {
+                    "place": "Welcome to the Forest, where to now?",
+                    "option1": {
+                        "text": "The Final destination",
+                        "value": 3},
+                    "option2": {"text": "Back to start",
+                        "value": 0}
+
+                },
+                {
+                    "place": "Welcome to the Desert, where to now?",
+                    "option1": {
+                        "text": "The Final destination",
+                        "value": 3},
+                    "option2": {"text": "Back to Start",
+                        "value": 0}
+
+                },
+                {
+                    "place": "You have reached your final destination. Where would you like to go",
+                    "option1": {
+                        "text": "Back Home",
+                        "value": 0},
+                    "option2": {"text": "The Forest",
+                        "value": 1}
+                }
+
+            ]
+            }
+        var choice = 0;
+        function adventureOn(choice) {
+            
+            document.getElementById("placeholder").innerHTML = "<form><p>" + data.Adventure[choice].place + "</p><p> "
+                    + "<input type=\"radio\" value=\"" + data.Adventure[choice].option1.value + "\" onchange=\"adventureOn(this.value)\">"
+                    + data.Adventure[choice].option1.text 
+                    + "<br><input type=\"radio\" value=\"" + data.Adventure[choice].option2.value + "\" onchange=\"adventureOn(this.value)\">"
+                    +data.Adventure[choice].option2.text
+
+                    if (choice == 0){
+                        document.body.style.backgroundImage = "url('https://upload.wikimedia.org/wikipedia/commons/b/b8/Pisgah_Home_Historic_District%2C_Highland_Park.JPG  ')"; 
+     
+                     }else if (choice == 1)
+                     {
+                        document.body.style.backgroundImage = "url('https://photogrist.com/wp-content/uploads/2018/03/Forrest-Winants-Smith.jpg')";
+                     }
+                     else if (choice == 2)
+                     {
+                        document.body.style.backgroundImage = "url('https://www.nationalgeographic.com/content/dam/magazine/rights-exempt/2018/06/DEPARTMENTS/Explore/explore-getting-there-gobi-desert.adapt.1900.1.jpg')";
+                     }
+                 }
+
+    </script>
+</head>
+<body>
+    <div id="placeholder">
+        <form>
+            <p>Start here</p>
+            <p>
+                <input type="radio" value="0" onchange="adventureOn(this.value)">Home
+            </p>
+        </form>
+    </div>
+
+
+</body>

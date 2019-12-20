@@ -1,0 +1,19 @@
+var Self = [
+    {
+        "Name": "Landon Howa",
+        "Age": 24,
+        "Married": false,
+        "Classes": [
+            "2470",
+            "1070",
+            "1020"
+        ],
+        "Hobbies": {
+            "Football": "Football, it is not only something I love to play, but love to watch. Go Pats!",
+            "Hiking": "Hiking, it is something I enjoy to do when it is way too hot down in the valley.",
+            "Computers": "Computers, Most of the time I really enjoy sharpening my computer skills in all aspects of CS."
+        }
+       
+        
+    }
+]
